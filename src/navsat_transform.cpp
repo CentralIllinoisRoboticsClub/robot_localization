@@ -487,6 +487,14 @@ namespace RobotLocalization
       {
         for (size_t j = 0; j < POSITION_SIZE; j++)
         {
+          /*if(i==j && (i==0 || i==4) )
+          {
+            latest_utm_covariance_(i,j) = 50.0;
+          }
+          else
+          {
+            latest_utm_covariance_(i, j) = msg->position_covariance[POSITION_SIZE * i + j];
+          }*/
           latest_utm_covariance_(i, j) = msg->position_covariance[POSITION_SIZE * i + j];
         }
       }
